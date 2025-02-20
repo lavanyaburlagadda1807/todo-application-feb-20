@@ -4,7 +4,11 @@ import TodoList from './TodoList';
 import AddTodo from './AddTodo';
 
 const TodoApp = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    { id: 1, text: 'Learn React', completed: false },
+    { id: 2, text: 'Build a Todo App', completed: false },
+    { id: 3, text: 'Master JavaScript', completed: false },
+  ]);
 
   const addTodo = (text) => {
     setTodos([...todos, { id: Date.now(), text, completed: false }]);
